@@ -33,7 +33,7 @@ def calc_age(uid):
     for unique_age in unique_ages:
         count = age_list.count(unique_age)
         age_tuples.append((unique_age, count))
-        age_tuples.sort(key=lambda age: age[1], reverse=True)
+        age_tuples.sort(key=lambda age: (-age[1], age[0]))
     return age_tuples
 
 
